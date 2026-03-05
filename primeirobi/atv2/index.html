@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv 2</title>
+</head>
+<body>
+    <h1>Página de Cadastro</h1>
+
+    <form>
+        <fieldset>
+            <legend>Crie sua conta</legend>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome"><br>
+            
+            <br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required><br>
+            
+            <br>
+            <label for="senha">Senha (mínimo 8 caracteres):</label><br>
+            <input type="password" id="senha" name="senha" minlength="8" required><br>
+
+            <br><b>Gênero:</b><br>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label><br>
+
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro</label>
+
+            <br>
+            <br><label for="bio">Biografia:</label><br>
+            <textarea id="bio" name="bio" placeholder="Fala um pouco sobre você..." rows="4"></textarea>
+            
+            <br>
+            <br><input type="checkbox" id="termo" name="termo" required>
+            <label for="termo">Eu li e aceito os termos de serviço.</label>
+        </fieldset>
+            
+        <br><button type="submit">Cadastrar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+</body>
+</html>
