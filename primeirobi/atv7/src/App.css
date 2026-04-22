@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: sandybrown;
+    color: #2a2016;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+header {
+    grid-column: 1 / 3;
+    background-color: darkblue;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 4px solid coral;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav {
+    grid-column: 1 / 3;
+    background-color: darkblue;
+    padding: 0.5rem 2rem;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+article {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0 2rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+article h2 {
+    font-size: 2rem;
+    color: darkblue;
+    margin-bottom: 0.5rem;
+}
+
+article time {
+    display: block;
+    color: #7a6a58;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+article p {
+    line-height: 1.8;
+}
+
+aside {
+    background-color: white;
+    padding: 1.75rem;
+    margin: 2rem 2rem 2rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    align-self: start;
+}
+
+aside h3 {
+    font-size: 1.1rem;
+    color: darkblue;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid coral;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+aside ul a {
+    color: #2a2016;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+aside ul a:hover {
+    color: darkblue;
+}
+
+footer {
+    grid-column: 1 / 3;
+    background-color: darkblue;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    border-top: 3px solid coral;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    header, nav, footer {
+        grid-column: 1 / 2;
+    }
+
+    article, aside {
+        grid-column: 1 / 2;
+        margin: 1rem;
+    }
+}
